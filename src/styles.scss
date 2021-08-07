@@ -1,0 +1,243 @@
+// ALL COLORS
+
+$yellow: #ffdc4b;
+$darkYellow: #ffc84b;
+
+$gray: #707070;
+$white: #fff;
+$black: #393939;
+
+$lightBlue: #daf1fd;
+$blue: #03a0f4;
+$dirBlue: #4bbaff;
+$darkBlue: #4b89ff;
+
+$darkPurple: #6003f4;
+$purple: #ab96ce;
+$lightPurple: #c3b5d1;
+
+// MAIN STYLES
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+// ZP STYLES
+
+.appContainer {
+    display: flex;
+    min-height: 724px;
+    max-height: 724px;
+}
+
+.ZPBtn {
+    min-width: 281px;
+    max-width: 281px;
+    min-height: 52px;
+    max-height: 52px;
+    color: $white;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    text-align: center;
+    border: 0;
+    margin-right: 10px;
+
+    &.blue {
+        background-color: $blue;
+    }
+
+    &.purple {
+        background-color: $darkPurple;
+
+        &.disabled {
+            color: $purple;
+            background-color: $lightPurple;
+        }
+    }
+
+    &:hover {
+        background-color: $darkBlue;
+    }
+}
+
+// LEFT PART
+
+.leftPart {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px;
+    background-color: $lightBlue;
+    overflow-y: hidden;
+
+    .topPart {
+        overflow: hidden;
+    }
+
+    .middlePart {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 492px;
+        max-height: 492px;
+        overflow-y: scroll;
+    }
+
+    .bottomPart {
+        overflow: hidden;
+    }
+}
+
+.directoryContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.dirForm {
+    flex: 1;
+    position: absolute;
+    top: 72px;
+    min-width: 281px;
+    max-width: 281px;
+    min-height: 152px;
+    max-height: 152px;
+    padding: 10px;
+    background-color: $white;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .btn {
+        min-width: 261px;
+        max-width: 261px;
+        min-height: 30px;
+        max-height: 30px;
+        color: $white;
+        line-height: 1.5;
+        font-size: 0.8rem;
+        text-align: center;
+        border: 0;
+        margin-bottom: 10px;
+
+        &.blue {
+            background-color: $blue;
+        }
+
+        &.gray {
+            background-color: $gray;
+        }
+    }
+}
+
+// RIGHT PART
+
+.rightPart {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 10px;
+}
+
+.ZPImgLabel {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 281px;
+    min-height: 52px;
+    color: $white;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    border: 0;
+    margin-right: 10px;
+    text-align: center;
+
+    div {
+        min-width: 281px;
+        min-height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.blue {
+        background-color: $blue;
+    }
+}
+
+.dirNameForm {
+    display: flex;
+    flex: 1;
+    margin-top: 10px;
+    min-height: 52px;
+    max-height: 52px;
+
+    label {
+        display: inline-block;
+        padding-top: 10px;
+        min-height: 36px;
+        max-height: 36px;
+        margin-right: 10px;
+    }
+    input {
+        min-height: 36px;
+        max-height: 36px;
+    }
+}
+
+.moveDirForm {
+    margin-top: 10px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    min-height: 492px;
+    max-height: 492px;
+    overflow-y: scroll;
+    background-color: $white;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.preview {
+    display: flex;
+    max-height: 900px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    min-height: 250px;
+    overflow-y: scroll;
+}
+
+.imgContainer {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+    &.selected {
+        border-radius: 0.5em;
+        border: solid $blue 6px;
+    }
+
+    &.unselected {
+        border-radius: 0.5em;
+    }
+}
