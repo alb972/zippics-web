@@ -1,0 +1,21 @@
+/**
+ * INPUTS
+ */
+
+.styledInputContainer {
+    display: flex;
+    flex-direction: column;
+
+    .styledInput {
+        min-width: 745px;
+        max-width: 745px;
+        min-height: 38px;
+        max-height: 38px;
+        color: $textNormalColor;
+        font-weight: $fontRegular;
+        padding: 0 $xsmall 0 $xsmall;
+        margin: 0;
+        border-radius: $xsmall;
+        border: solid $bgGrayColor 1px;
+    }
+}

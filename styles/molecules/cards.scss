@@ -1,0 +1,155 @@
+/**
+ * List 
+ */
+.simpleCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 347px;
+    min-width: 347px;
+    min-height: 201px;
+    max-height: 201px;
+    margin: 0 $large $large 0;
+    border-radius: $xsmall;
+
+    .simpleCardTopBar {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: $medium;
+        background-color: $bgAppBarGrayColor;
+    }
+
+    .simpleCardContent {
+        display: flex;
+        flex: 4;
+        flex-direction: column;
+        padding: $medium;
+        background-color: $white;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        .bottom {
+            display: flex;
+            flex: 1;
+            align-items: flex-end;
+        }
+    }
+}
+
+.multipleActionsCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 347px;
+    min-width: 347px;
+    min-height: 201px;
+    max-height: 201px;
+    margin: 0 $large $large 0;
+    border-radius: $xsmall;
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 3;
+        padding: $medium;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+}
+
+.deviceCard {
+    display: flex;
+    min-width: 780px;
+    max-width: 780px;
+    min-height: 430px;
+    max-height: 430px;
+    flex-direction: column;
+
+    .iconContainer {
+        margin-right: $medium;
+    }
+
+    .deviceCardTopBar {
+        display: flex;
+        align-items: center;
+        min-height: 78px;
+        max-height: 78px;
+        padding: $medium;
+        background-color: $bgGreenColor;
+        border-radius: $xsmall $xsmall 0 0;
+    }
+
+    .deviceInfoCardContainer {
+        display: flex;
+        flex: 1;
+        padding: $medium;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: $xsmall;
+
+        .leftContainer,
+        .rightContainer {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+
+            .deviceInfoItemContainer {
+                display: flex;
+                align-items: center;
+                margin: 0 $medium $medium 0;
+            }
+        }
+    }
+}
+
+.header1Container {
+    flex-direction: column;
+    margin: 0 0 $small 0;
+}
+
+.deviceActionCardContainer {
+    max-width: 780px;
+    padding: $medium;
+    border-radius: $xsmall;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.actionBlockContainer {
+    display: flex;
+    flex: 1;
+
+    .actionBlockContent {
+        display: flex;
+        min-width: 256px;
+        max-width: 256px;
+        min-height: 256px;
+        max-height: 256px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: $medium;
+        background-color: $bgGrayColor;
+    }
+}
+
+.applicationReviewCardContainer {
+    max-width: 780px;
+    padding: $medium;
+    border-radius: $xsmall;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    .applicationReportsContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .applicationReportContainer {
+        display: flex;
+        flex-direction: column;
+        min-width: 166px;
+        max-width: 166px;
+        min-height: 166px;
+        max-height: 166px;
+        overflow: hidden;
+        padding: $small;
+        margin: 0 $medium $medium 0;
+        border-radius: $xsmall;
+        border: solid $bgBlueColor 1px;
+    }
+}

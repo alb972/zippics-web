@@ -1,0 +1,149 @@
+/** ****************
+ * TEXT(S) STYLES
+ ****************** */
+
+/** ****************
+ * APP
+ ****************** */
+
+.h1Text {
+    color: $textNormalColor;
+    font-weight: $fontRegular;
+    font-size: 20px;
+    margin: 0;
+
+    &.white {
+        color: $textWhiteColor;
+    }
+
+    &.gray {
+        color: $textGrayColor;
+    }
+
+    &.bold {
+        font-weight: $fontBold;
+    }
+}
+
+.h2Text {
+    color: $textNormalColor;
+    font-weight: $fontRegular;
+    font-size: 16px;
+    margin: 0;
+
+    &.white {
+        color: $textWhiteColor;
+    }
+
+    &.gray {
+        color: $textGrayColor;
+    }
+
+    &.bold {
+        font-weight: $fontBold;
+    }
+}
+
+.h3Text {
+    color: $textNormalColor;
+    font-weight: $fontRegular;
+    font-size: 14px;
+    margin: 0;
+
+    &.white {
+        color: $textWhiteColor;
+    }
+
+    &.gray {
+        color: $textGrayColor;
+    }
+
+    &.bold {
+        font-weight: $fontBold;
+    }
+}
+
+.h4Text {
+    color: $textNormalColor;
+    font-weight: $fontRegular;
+    font-size: 14px;
+    margin: 0;
+
+    &.white {
+        color: $textWhiteColor;
+    }
+
+    &.gray {
+        color: $textGrayColor;
+    }
+
+    &.bold {
+        font-weight: $fontBold;
+    }
+}
+
+.subtitle1Text {
+    color: $textNormalColor;
+    font-weight: $fontRegular;
+    font-size: 12px;
+    margin: 0;
+
+    &.white {
+        color: $textWhiteColor;
+    }
+
+    &.gray {
+        color: $textGrayColor;
+    }
+
+    &.bold {
+        font-weight: $fontBold;
+    }
+}
+
+.body1Text {
+    color: $textNormalColor;
+    font-weight: $fontRegular;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    margin: 0;
+
+    &.white {
+        color: $textWhiteColor;
+    }
+
+    &.gray {
+        color: $textGrayColor;
+    }
+
+    &.bold {
+        font-weight: $fontBold;
+    }
+}
+
+.body2Text {
+    color: $textNormalColor;
+    font-weight: $fontRegular;
+    font-size: 12px;
+    margin: 0;
+
+    &.white {
+        color: $textWhiteColor;
+    }
+
+    &.gray {
+        color: $textGrayColor;
+    }
+
+    &.bold {
+        font-weight: $fontBold;
+    }
+}
+
+/** ****************
+ * CONTAINERS
+ ****************** */
+
+.paragraphContainer {
+    margin: 0 0 $small 0;
+}

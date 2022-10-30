@@ -12,8 +12,15 @@ import { StoreDispatch } from "../App";
 import { getFilteredFiles, isImgIn, removeHeaderBase64, toZPImage } from "../../utils/methods";
 import { ZPImage } from "../../model/ZPImage";
 import { ZPDir } from "../../model/ZPDir";
-import { LeftPart } from "../shared/LeftPart";
-import { RightPart } from "../shared/RightPart";
+import { RightPart } from "../organisms/RightPart";
+import { TopBar } from "../atoms/TopBar";
+import { HorizontalListTemplate } from "../templates/HorizontalListTemplate";
+import { SpacerMedium, SpacerSmall } from "../atoms/Spacers";
+import { VerticalListTemplate } from "../templates/VerticalListTemplate";
+import { H1Text } from "../atoms/Texts";
+import { ActiveBtn } from "../atoms/Buttons";
+import { CreateDirForm } from "../organisms/forms/CreateDirForm";
+import { Directories } from "../organisms/Directories";
 
 interface HomeProps {
   counter: CounterStoreInterface;
@@ -209,30 +216,41 @@ class Home extends React.Component<HomeProps, HomeState> {
     } = this.state;
 
     return (
-      <div className="appContainer">
-        <LeftPart
-          dirToDisplayUUID={dirToDisplayUUID}
-          allDirectories={allDirectories}
-          directoryFormShouldAppear={directoryFormShouldAppear}
-          selectDirHandler={this.handleSelectDir}
-          displayNewDirectoryFormHandler={this.handleDisplayNewDirectoryForm}
-          cancelNewDirCreationHandler={this.cancelNewDirCreation}
-          validNewDirCreationHandler={this.validNewDirCreation}
-          downloadFilesHandler={this.downloadFiles}
-        />
-        <RightPart
-          defaultDirUUID={defaultDirUUID}
-          dirToDisplayUUID={dirToDisplayUUID}
-          allDirectories={allDirectories}
-          selectedImgFilesData={selectedImgFilesData}
-          moveDirFormShouldAppear={moveDirFormShouldAppear}
-          handleImagesInputChangeHandler={this.handleImagesInputChange}
-          toggleImgSelectHandler={this.toggleImgSelect}
-          dirNameChangeHandler={this.handleDirNameChange}
-          displayMoveToDirFormHandler={this.handleDisplayMoveDirForm}
-          cancelMoveToDirHandler={this.cancelMoveDir}
-          validMoveToDirHandler={this.handleMoveToDir}
-        />
+      <div className="homeContainer">
+        <TopBar title="Zippics" />
+        <HorizontalListTemplate spacer={<SpacerMedium />}>
+          <VerticalListTemplate spacer={<SpacerSmall />}>
+            <H1Text text="Dossier" />
+            <ActiveBtn text="Créer un dossier" clickHandler={this.handleDisplayNewDirectoryForm} />
+            <CreateDirForm
+              shouldAppear={directoryFormShouldAppear}
+              allDirectories={allDirectories}
+              cancelCreationHandler={this.cancelNewDirCreation}
+              validCreationHandler={this.validNewDirCreation}
+            />
+            <HorizontalListTemplate spacer={<SpacerSmall />}>
+              <Directories
+                allDirs={allDirectories}
+                dirToDisplayUUID={dirToDisplayUUID}
+                selectDirHandler={this.handleSelectDir}
+              />
+            </HorizontalListTemplate>
+            <ActiveBtn text="Télécharger tout" clickHandler={this.downloadFiles} />
+          </VerticalListTemplate>
+          <RightPart
+            defaultDirUUID={defaultDirUUID}
+            dirToDisplayUUID={dirToDisplayUUID}
+            allDirectories={allDirectories}
+            selectedImgFilesData={selectedImgFilesData}
+            moveDirFormShouldAppear={moveDirFormShouldAppear}
+            handleImagesInputChangeHandler={this.handleImagesInputChange}
+            toggleImgSelectHandler={this.toggleImgSelect}
+            dirNameChangeHandler={this.handleDirNameChange}
+            displayMoveToDirFormHandler={this.handleDisplayMoveDirForm}
+            cancelMoveToDirHandler={this.cancelMoveDir}
+            validMoveToDirHandler={this.handleMoveToDir}
+          />
+        </HorizontalListTemplate>
       </div>
     );
   }

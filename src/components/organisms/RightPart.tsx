@@ -1,8 +1,8 @@
 import React from "react";
 import { ZPDir } from "../../model/ZPDir";
 import { ZPImage } from "../../model/ZPImage";
-import { AddImgsBtn } from "./btns/AddImgsBtn";
-import { MoveImgBtn } from "./btns/MoveImgBtn";
+import { AddImgsBtn } from "../atoms/AddImgsBtn";
+import { ActiveBtn } from "../atoms/Buttons";
 import { MoveDirForm } from "./forms/MoveDirForm";
 import { ImgsPreview } from "./ImgsPreview";
 
@@ -51,9 +51,10 @@ export const RightPart = (props: RightPartProps): JSX.Element => {
             {dirToDisplay.uuid === defaultDirUUID && (
               <AddImgsBtn handleImagesInputChange={handleImagesInputChangeHandler} />
             )}
-            <MoveImgBtn
+            <ActiveBtn
+              text="Déplacer image(s)"
               isDisabled={selectedImgFilesData.length <= 0}
-              displayMoveToDirFormHandler={displayMoveToDirFormHandler}
+              clickHandler={displayMoveToDirFormHandler}
             />
             <MoveDirForm
               shouldAppear={moveDirFormShouldAppear}
