@@ -1,0 +1,51 @@
+/** 
+* IMPORTS
+*/
+
+.directoryContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.dirNameForm {
+    display: flex;
+    flex: 1;
+    margin-top: 10px;
+    min-height: 52px;
+    max-height: 52px;
+
+    label {
+        display: inline-block;
+        padding-top: 10px;
+        min-height: 36px;
+        max-height: 36px;
+        margin-right: 10px;
+    }
+    input {
+        min-height: 36px;
+        max-height: 36px;
+    }
+}
+
+.imgContainer {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+    &.selected {
+        border-radius: 0.5em;
+        border: solid $blue 6px;
+    }
+
+    &.unselected {
+        border-radius: 0.5em;
+    }
+}

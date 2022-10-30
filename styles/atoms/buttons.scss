@@ -1,0 +1,77 @@
+.activeBtn {
+    min-width: 98px;
+    max-width: 256px;
+    min-height: 38px;
+    max-height: 38px;
+    border-radius: $xsmall;
+    border: none;
+    background-color: $activeBtnColor;
+
+    &:hover {
+        border: solid $green 2px;
+    }
+
+    &:active {
+        background-color: $green;
+    }
+}
+
+.secondaryBtn {
+    min-width: 98px;
+    max-width: 256px;
+    min-height: 38px;
+    max-height: 38px;
+    border-radius: $xsmall;
+    border: none;
+    background-color: $bgGrayColor;
+
+    &:hover {
+        border: solid $black 2px;
+    }
+
+    &:active {
+        background-color: $black;
+    }
+}
+
+.iconBtn {
+    min-width: 32px;
+    padding: $small;
+    border-radius: $xsmall;
+    border: none;
+    margin-left: $small;
+    background-color: $bgGrayColor;
+}
+
+.helpBtn {
+    border: none;
+    margin: 0 0 0 $small;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+.ZPImgLabel {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 281px;
+    min-height: 52px;
+    color: $white;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    border: 0;
+    margin-right: 10px;
+    text-align: center;
+
+    div {
+        min-width: 281px;
+        min-height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.blue {
+        background-color: $blue;
+    }
+}

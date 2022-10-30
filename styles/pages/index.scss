@@ -1,0 +1,22 @@
+/** 
+* IMPORTS
+*/
+@import "./enterprises.scss", "./policies.scss";
+
+/**
+ * PAGES
+ */
+
+.homeContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.appTopBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bgAppBarGrayColor;
+    padding: $medium;
+}

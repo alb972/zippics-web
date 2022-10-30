@@ -1,0 +1,54 @@
+/** 
+* IMPORTS
+*/
+@import "./texts.scss", "./buttons.scss", "./spacers.scss";
+
+/**
+ * LINES
+ */
+
+.line {
+    font-size: 20px;
+    border-top: solid 1px;
+    color: $textNormalColor;
+
+    &.white {
+        color: $white;
+    }
+
+    &.gray {
+        color: $bgGrayColor;
+    }
+
+    &.bold {
+        border-top: solid 2px;
+    }
+}
+
+/**
+ * CHECKBOXS
+ */
+
+.checkboxGroupContainer,
+.radioBtnGroupContainer {
+    display: flex;
+    flex-direction: column;
+
+    .checkboxGroupTitle,
+    .radioBtnGroupTitle {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.checkboxContainer,
+.radioBtnContainer {
+    display: flex;
+    align-items: center;
+    padding: $xsmall 0 $xsmall 0;
+}
+
+.checkboxLabelContainer,
+.radioBtnLabelContainer {
+    margin-left: 10px;
+}

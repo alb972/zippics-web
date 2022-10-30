@@ -2,8 +2,8 @@ import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import Home from "./containers/Home";
-import NotFoundPage from "./containers/NotFoundPage";
+import Home from "./pages/Home";
+import NotFoundPage from "./pages/NotFoundPage";
 
 import { allReducers } from "../reducers/indexReducers";
 

@@ -1,0 +1,28 @@
+/**
+ * POLICIES
+ */
+
+.policyEditionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .policyEditionContent {
+        display: flex;
+        flex-direction: column;
+        padding: $large;
+        background-color: $bgAppBarGrayColor;
+        border: solid $bgBlueColor 1px;
+    }
+
+    .policyEditionButtons {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        padding: $medium;
+        border-radius: 0 20px 0 0;
+        border: solid $bgBlueColor 1px;
+    }
+}

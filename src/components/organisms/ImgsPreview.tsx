@@ -4,6 +4,8 @@ import React from "react";
 import { ZPDir } from "../../model/ZPDir";
 import { ZPImage } from "../../model/ZPImage";
 import { isImgIn } from "../../utils/methods";
+import { SpacerSmall } from "../atoms/Spacers";
+import { HorizontalListTemplate } from "../templates/HorizontalListTemplate";
 
 interface PreviewProps {
   dirToDisplay: ZPDir;
@@ -15,7 +17,7 @@ export const ImgsPreview = (props: PreviewProps): JSX.Element => {
   const { dirToDisplay, selectedImgs, toggleImgSelectHandler } = props;
 
   return (
-    <div className="preview">
+    <HorizontalListTemplate spacer={<SpacerSmall />}>
       {dirToDisplay.images.map((item: ZPImage, index: number) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
@@ -40,6 +42,6 @@ export const ImgsPreview = (props: PreviewProps): JSX.Element => {
           </React.Fragment>
         );
       })}
-    </div>
+    </HorizontalListTemplate>
   );
 };

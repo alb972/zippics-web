@@ -1,0 +1,18 @@
+/**
+ * ENTERPRISES
+ */
+
+.enterpriseManagerContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: $bgLightGrayColor;
+    padding: $medium;
+    overflow-y: auto;
+}
+
+.enterpriseDetailsPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
